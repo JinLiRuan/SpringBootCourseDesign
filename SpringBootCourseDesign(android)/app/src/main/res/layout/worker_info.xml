@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back1"
+
+    >
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="所有工人信息如下："
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/lightGray"
+
+        />
+    <LinearLayout
+        android:layout_marginTop="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+        <EditText
+            android:id="@+id/user_sno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入工号可查询"
+            android:textAlignment="center"
+
+            />
+        <Button
+            android:id="@+id/user_select"
+            android:layout_marginStart="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询"
+            android:textSize="20sp"
+            android:textColor="@color/lightGray"
+            android:background="#c7160a"
+            />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="30dp"
+    >
+
+        <TextView
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="序号"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_marginStart="20sp"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工号"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工作类型"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+
+
+</LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="1dp"
+       >
+
+    </ListView>
+
+
+
+</LinearLayout>

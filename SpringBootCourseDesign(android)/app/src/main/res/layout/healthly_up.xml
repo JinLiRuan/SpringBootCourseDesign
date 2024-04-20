@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/lightGray"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.近14天是否接触过中高风险地区的人？"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:textColor="@color/red_light"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择是或否"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="20sp"
+
+            />
+   <RadioGroup
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       >
+       <RadioButton
+           android:id="@+id/yes"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="是"
+           android:layout_marginTop="10sp"
+           android:layout_marginLeft="20sp"
+           />
+
+       <RadioButton
+           android:id="@+id/no"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="否"
+           android:layout_marginTop="10sp"
+           android:layout_marginLeft="20sp"
+           />
+
+   </RadioGroup>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.确定自己身体无发烧咳嗽等症状？"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:textColor="@color/red_light"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择是或否"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="20sp"
+
+            />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/yy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="20sp"
+                />
+
+            <RadioButton
+                android:id="@+id/nn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="否"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="20sp"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.以上信息是否属实？"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:textColor="@color/red_light"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择是或否"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="20sp"
+
+            />
+        <RadioGroup
+            android:id="@+id/tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/yyy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="是"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="20sp"
+                />
+
+            <RadioButton
+                android:id="@+id/nnn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="否"
+                android:layout_marginTop="10sp"
+                android:layout_marginLeft="20sp"
+                />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.您现在所处位置？"
+        android:textSize="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="20sp"
+        android:textColor="@color/red_light"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择南门或北门"
+            android:layout_marginTop="20sp"
+            android:layout_marginLeft="20sp"
+
+            />
+
+        <RadioGroup
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+        <RadioButton
+            android:id="@+id/address_n"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="南门"
+            android:layout_marginTop="10sp"
+            android:layout_marginLeft="20sp"
+            />
+
+        <RadioButton
+            android:id="@+id/address_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北门"
+            android:layout_marginTop="10sp"
+            android:layout_marginLeft="20sp"
+            />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/stu_submit"
+        android:layout_marginTop="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定上传"
+        android:textSize="25sp"
+        android:textColor="@color/lightGray"
+        android:background="@color/red_light"
+
+        />
+
+
+</LinearLayout>

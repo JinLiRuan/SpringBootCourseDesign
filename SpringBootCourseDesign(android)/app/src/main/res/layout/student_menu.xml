@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/back"
+    >
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sise"
+            />
+
+
+
+    <TableRow>
+
+
+        <Button
+                android:id="@+id/stu_PersonInfo"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="个人信息"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+            />
+
+
+        <Button
+            android:id="@+id/stu_health"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="健康上报"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+
+            />
+
+    </TableRow>
+
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/stu_pre_check"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/button"
+            android:text="待审核"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/stu_check"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/button"
+            android:text="核酸结果"
+            android:textSize="20sp"
+
+            />
+
+    </TableRow>
+
+
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/stu_up_message"
+            android:layout_marginLeft="50dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="上报情况"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+            />
+
+
+        <Button
+            android:id="@+id/stu_exit"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="退出系统"
+            android:textSize="20sp"
+            android:background="@drawable/button"
+
+            />
+
+    </TableRow>
+
+</TableLayout>

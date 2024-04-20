@@ -1,0 +1,44 @@
+
+在绑定sql语句的时候nativeQuery = true标识在本地执行sql语句，推荐还是所有的都加上
+
+另外一定要记得在自己写update语句和delete的sql语句的时候一定要加上 @Modifying 注解
+
+
+public interface MyOrderRepo extends JpaRepository<MyOrder,Long>{
+
+  //1.没有参数直接查询
+    @Query(value = "select * from my_order",nativeQuery = true)
+    List<MyOrder> getAll();
+
+    //2.sql语句获取参数方式 ?1 表示第一个参数 ?2 表示第二个参数，这里只写一个
+    //使用 ? 的方式进行获取参数就可以不使用 @Param 注解指定名称
+    @Query(value = "select * from my_order where id = ?1",nativeQuery = true)
+    MyOrder getMyOrderById(@Param("id")Long id);
+
+    //3.sql语句入参方式 使用 @Param 指定名称直接按照名获取 这里演示是departmaent 所以使用  :departmaent即可
+    //如果多个参数还是使用 :+@Param里面的值即可 如：@Param("xxx") 那么sql取值的时候就应该是：:xxx
+    @Query(value = "select * from my_order where departmaent = :departmaent",nativeQuery = true)
+    MyOrder getMyOrderBydepartmaent(@Param("departmaent")String departmaent);
+
+
+    //4.1.如果参数是实体类（也不一定是，这里是用的接口指定的实体类，不是指定的实体类也是这样使用，但是接口指定实体类还有一种，看4.2）
+    //第一种：:#{#xxx1.xxx2}  其中xxx1是@Param("myOrder")中指定的名称  xxx2就是该实体类的字段名称
+    @Query(value = "select * from my_order where departmaent = :#{#myOrder.test}",nativeQuery = true)
+    MyOrder newMyOrderBydepartmaent(@Param("myOrder")MyOrder myOrder);
+
+    //4.2.如果参数实体类是本接口指定的实体类，如MyOrder
+    //第二种：?#{[0]} 这里面的 [0]指的是实体类中的第0个属性，
+    //或者可以写成?#{myOrder.emailAddress，但是这里的myOrder是在创建MyOrder实体类的时候使用@Entity(name="myOrder")指定的
+    //这里4.2完全是一种拓展，其实使用4.1的方式不管是不是本接口指定的实体类参数都可以完成sql语句参数的绑定
+    @Query(value = "select * from my_order where departmaent = :#{#test}",nativeQuery = true)
+    MyOrder newMyOrderBydepartmaent();
+	
+
+	//实战 原始分页 并且格式化时间进行判断 查询
+	//根据时间查询 并且分页 
+    @Query(value = "SELECT * FROM my_order WHERE is_dispose = 0 AND DATE_FORMAT( out_time, '%Y-%m-%d' ) " +
+            "= :#{#myOrderParam.outTime} LIMIT :#{#myOrderParam.curPage} , :#{#myOrderParam.pageNum}",nativeQuery = true)
+    List<MyOrder> getAllMyOrderByDepartmaentAndOutTime(@Param("myOrderParam")MyOrderParam myOrderParam);
+
+
+}
